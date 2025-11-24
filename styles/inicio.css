@@ -114,26 +114,16 @@ p {
     margin: 0 auto 30px;
  }   
 
-
-
-
-
-
-
-
-
-/* ajustar o bloco com texto + trailler ( largura máxima e centrar o texto na zona)*/
-.intro-texto {
-    max-width: 900px;      
-    margin: 0 auto 30px;   
-}
-
-/* editar o texto */
-.intro-texto p {
-    line-height: 1.8;      
+ /* editar texto */
+ p {
+    line-height: 1.8;
     font-size: 18px;
-    text-align: center;  
-}
+    text-align: center;
+ } 
+
+
+
+
 
 
 
