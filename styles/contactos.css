@@ -1,0 +1,48 @@
+/* estealização da pagina web */
+
+html,body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* criação do cabeçalho */
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(22, 22, 61);
+    border-radius: 0 0 50px 50px;
+    padding: 10px 0;
+    margin-top: 0;
+}
+
+/* modificação dos "links */
+
+.links {
+    list-style: none;
+    display: flex;
+    gap: 90px;
+ } 
+
+.links a {
+    text-decoration: none;
+    margin-right: 100px;
+    color: rgb(200, 235, 255);
+    font-family: 'Pacifico-Regular';
+    font-size: 18px;
+}
+.logo {
+    height: 100px;
+    margin-left: 105px;
+}
+/* falta fazer o zoom */
+
+/* fundo */
+
+.fundo {
+    background-image: url("../Imagens/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
