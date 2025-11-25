@@ -1,3 +1,9 @@
+/* fontes de letra utilizadas */
+@font-face {
+    font-family: 'Pacifico-Regular';
+    src: url('../fonts/Pacifico-Regular.ttf') format('opentype');
+}
+
 /* estealização da pagina web */
 
 html,body {
@@ -18,7 +24,7 @@ html,body {
     margin-top: 0;
 }
 
-/* modificação dos "links */
+/* modificação dos "links */ 
 
 .links {
     list-style: none;
@@ -33,11 +39,15 @@ html,body {
     font-family: 'Pacifico-Regular';
     font-size: 18px;
 }
+
+.links a:hover {
+    color: #ffffff;
+}
+
 .logo {
     height: 100px;
     margin-left: 105px;
 }
-/* falta fazer o zoom */
 
 /* fundo */
 
@@ -45,4 +55,88 @@ html,body {
     background-image: url("../Imagens/fundo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* formulário do cabeçalho */
+
+/* estelização do cabeçalho |*/
+
+.contacto-sitio {
+    width: 50%;
+    margin: 120px auto 60px;
+    padding: 30px 40px;
+    background:rgb(22, 22, 61) ;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Pacifico-Regular';
+}
+
+/* modificação do titulo */
+
+h2 {
+    font-size: 45px;
+}
+
+/* modificação de formulário */
+
+.form-moana {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* alinhar os "subtitulos" a esquerda e de forma legivel*/ 
+
+label {
+    width: 100%;
+    margin: 0;
+    font-size: 20px;
+    text-align: left;
+}
+
+
+/* por a caixa no mesmo tamanho e não editavel */
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+
+/* estealizar o botão */
+
+button {
+    width: 150px;
+    padding: 12px 0;
+    border-radius: 20px;
+    background-color: #9cd9ff;
+    color: #0b1a33;
+    font-size: 20px;
+    margin-top: 35px;
+    align-items: center;
+    margin: 10px auto 0;
+    /* um zoozito a passar com o rato no botão */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* apos clicar no botão */
+button:hover {
+background-color: #ffffff;
+transform: scale(1.12);
+}
+
+
+/* rodapé */
+.rodape {
+    color:rgb(0, 0, 0);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ .rodape-texto {
+    margin: 0;
+    font-size: 16px;
 }
