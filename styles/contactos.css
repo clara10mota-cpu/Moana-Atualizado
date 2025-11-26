@@ -67,6 +67,8 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
+    background-attachment: scroll; /* <- muito importante para iPhone */
+    min-height: 100vh;  
 }
 
 /* checkbox do menu mobile */
@@ -296,6 +298,12 @@ h2 {
     .menu-toggle:checked + .menu-btn + .links {
         display: flex;
     }
+    .fundo {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center center;
+    }
+
 }
 
 
