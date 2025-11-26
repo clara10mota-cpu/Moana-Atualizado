@@ -9,6 +9,10 @@
     src: url('../fonts/PoetsenOne-Regular.ttf') format('opentype');
 }
 
+@font-face {
+    font-family: 'Pacifico-Regular';
+    src: url('../fonts/Pacifico-Regular.ttf') format('opentype');
+}
 /* estealização da pagina web */
 
 html,body {
