@@ -318,7 +318,7 @@ h2 {
     background: white;
     border-radius: 10px;
 }
-@media (max-width: 768px) {
+@media (max-width: 490px) {
 
     .menu-btn {
         display: flex;
