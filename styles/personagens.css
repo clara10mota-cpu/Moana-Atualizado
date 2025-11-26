@@ -222,6 +222,40 @@ h1 {
 }
 }
 
+/* Botão do menu (3 pontos) */
+.menu-btn {
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none; /* escondido por defeito */
+}
+
+/* Quando está em ecrãs pequenos, aparece */
+@media (max-width: 700px) {
+    .menu-btn {
+        display: block;
+        margin-right: 20px;
+    }
+
+    /* escondemos os links por defeito em telemóvel */
+    .links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: rgb(22, 22, 61);
+        padding: 10px 20px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    /* quando ativo, mostra o menu */
+    .links.active {
+        display: flex;
+    }
+}
+
+
 
 
 

@@ -140,3 +140,127 @@ transform: scale(1.12);
     margin: 0;
     font-size: 16px;
 }
+
+/* modificações para ecras sem ser computador */
+
+/* modificação para telemovel (até 480 px) */
+
+@media (max-widht:480px)  {
+
+/* modificar cabeçalho */
+
+.cabecalho {
+    padding: 10px 15px;
+}
+
+/* modificar os links */
+
+.links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+/* modificar parte dos contcatos */
+
+.contacto-sitio {
+    width: 92%;
+    margin: 60px auto 25px;
+    padding: 18px 13px;
+}
+
+/*modificar o titulo  */
+
+h2 {
+    margin-top: 17px;
+}
+
+/* modificar o rodapé */
+
+.contacto-intro {
+    font-size: 13px;
+ }   
+
+ /*modificar botão */
+
+ .button {
+    width: 100%;
+} 
+
+/* modificar rodapé */
+
+.rodape-texto {
+    font-size: 13px;
+} 
+}
+
+ /* modificar para tablets */
+
+ @media (max-widht:900px)  {
+
+/* modificar o logo  */
+
+.logo {
+    height: 75px;
+}
+
+/* modificar cabeçalho */
+
+.cabecalho {
+    padding: 10px 17px;
+    
+}
+
+/* modificar os links */
+
+.links {
+   
+    gap: 40px;
+}
+
+/* modificar parte do contacto */
+
+.contacto-sitio {
+    width: 70%;
+    margin: 90px auto 35px;
+    padding: 25px 25px;
+}
+
+h2 {
+
+    font-size: 28px;
+}
+}
+
+/* Botão do menu (3 pontos) */
+.menu-btn {
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none; /* escondido por defeito */
+}
+
+/* Quando está em ecrãs pequenos, aparece */
+@media (max-width: 700px) {
+    .menu-btn {
+        display: block;
+        margin-right: 20px;
+    }
+
+    /* escondemos os links por defeito em telemóvel */
+    .links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: rgb(22, 22, 61);
+        padding: 10px 20px;
+        border-radius: 0 0 20px 20px;
+    }
+
+    /* quando ativo, mostra o menu */
+    .links.active {
+        display: flex;
+    }
+}
