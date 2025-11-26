@@ -12,23 +12,22 @@
     src: url('../fonts/Pacifico-Regular.ttf') format('opentype');
 }
 
-/* reset básico */
-html, body {
+/* estealização da pagina web */
+
+html,body {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
-/* fundo da página */
-.fundo {
-    background-image: url("../Imagens/fundo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+/* modificação do logo */
+
+.logo {
+    height: 100px;
+    margin-left: 100px;
 }
 
-/* cabeçalho  */
+/* criação do cabeçalho */
 
 .cabecalho {
     display: flex;
@@ -39,11 +38,29 @@ html, body {
     padding: 10px 0;
 }
 
-/* logo */
+/* modificação dos "links */
 
-.logo {
-    height: 100px;
-    margin-left: 105px;
+.links {
+    list-style: none;
+    display: flex;
+    gap: 90px;
+ } 
+
+.links a {
+    text-decoration: none;
+    margin-right: 100px;
+    color: rgb(200, 235, 255);
+    font-family: 'Pacifico-Regular';
+    font-size: 18px;
+}
+
+.links a:hover {
+    color: #ffffff;
+}
+.fundo {
+    background-image: url("../Imagens/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* checkbox do menu mobile */
@@ -110,7 +127,6 @@ html, body {
         display: flex;
     }
 }
-
 
 /* SECÇÃO DO FORMULÁRIO */
 
