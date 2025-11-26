@@ -20,13 +20,6 @@ html,body {
     height: 100%;
 }
 
-/* modificação do logo */
-
-.logo {
-    height: 100px;
-    margin-left: 100px;
-}
-
 /* criação do cabeçalho */
 
 .cabecalho {
@@ -36,6 +29,7 @@ html,body {
     background-color: rgb(22, 22, 61);
     border-radius: 0 0 50px 50px;
     padding: 10px 0;
+    margin-top: 0;
 }
 
 /* modificação dos "links */
@@ -53,14 +47,26 @@ html,body {
     font-family: 'Pacifico-Regular';
     font-size: 18px;
 }
-
-.links a:hover {
-    color: #ffffff;
+.logo {
+    height: 100px;
+    margin-left: 105px;
 }
+
+h2 {
+
+    font-size: 45px;
+    font-family: 'PoetsenOne-Regular';
+}  
+
+
+
+/* fundo */
+
 .fundo {
     background-image: url("../Imagens/fundo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0;
 }
 
 /* checkbox do menu mobile */
@@ -127,6 +133,171 @@ html,body {
         display: flex;
     }
 }
+
+/* modificar titulo */ 
+
+h1 {
+    text-align: center;
+    font-family: 'PoestsenOne-Regular';
+    margin-top: 130px;
+    font-size: 45px;
+    margin-left: 10px;
+
+}
+
+/* rodape bem basico */
+
+.rodape {
+    color:rgb(0, 0, 0);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+ 
+ .rodape-texto {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* modificações para ecras sem ser computador */
+
+/* modificação para telemovel (até 480 px) */
+
+@media (max-widht:480px)  {
+
+/* modificar cabeçalho */
+
+.cabecalho {
+    padding: 10px 15px;
+}
+
+/* modificar os links */
+
+.links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+/* modificar titulo */
+
+h2 {
+    margin-top: 38px;
+    font-size: 30px;
+    text-align: center;
+}
+
+/* modificação do espaço dos quadros */
+
+.contacto-sitio {
+    margin-top: 30px;
+}
+
+/* modificar cartões */
+
+.form-moana{
+    width: 100%;
+}
+
+/* editar rodapé */
+
+.rodape-texto {
+    font-size: 13px;
+ }   
+
+} 
+
+ /* modificar para tablets */
+
+ @media (max-widht:900px)  {
+
+/* modificar o logo  */
+
+.logo {
+    height: 75px;
+}
+
+/* modificar cabeçalho */
+
+.cabecalho {
+    padding: 10px 17px;
+    
+}
+
+/* modificar os links */
+
+.links {
+     gap: 40px;
+}
+
+/* modificar o titulo */
+
+h2 {
+    margin-top: 60px;
+    font-size: 30px;
+}
+ 
+/* modificar espaço dos cartões */
+
+.contacto-sitio {
+    margin-top: 40px;
+    gap: 24px;
+}
+
+/*modificar cartões */
+
+.form-moana {
+    width: 45%;
+    margin-left: 0;
+
+}
+}
+
+.menu-toggle {
+    display: none;
+}
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.menu-btn .bar {
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+}
+@media (max-width: 490px) {
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .links {
+        display: none;
+        position: absolute;
+        top: 90px;
+        right: 20px;
+        background: rgb(22,22,61);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: right;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Quando o checkbox está ativado → mostrar o menu */
+    .menu-toggle:checked + .menu-btn + .links {
+        display: flex;
+    }
+}
+
 
 /* SECÇÃO DO FORMULÁRIO */
 
@@ -205,83 +376,3 @@ html,body {
     font-size: 16px;
 }
 
-/* ------------------ RESPONSIVO ------------------ */
-
-/* mobile e tablets pequenos */
-@media (max-width: 768px) {
-
-    /* fundo: evita bug no iPhone */
-    .fundo {
-        background-attachment: scroll;
-        background-size: cover;
-        background-position: center;
-    }
-
-    /* cabeçalho mais compacto */
-    .cabecalho {
-        padding: 10px 15px;
-    }
-
-    .logo {
-        height: 75px;
-        margin-left: 10px;
-    }
-
-    /* mostra o hambúrguer e esconde os links */
-    .menu-btn {
-        display: flex;
-    }
-
-    .links {
-        display: none;
-        position: absolute;
-        top: 90px;
-        right: 20px;
-        background: rgb(22, 22, 61);
-        padding: 20px;
-        border-radius: 10px;
-        flex-direction: column;
-        gap: 15px;
-        margin-right: 0;
-    }
-
-    .links a {
-        margin: 0;
-    }
-
-    /* quando o checkbox está marcado → mostra o menu */
-    .menu-toggle:checked + .menu-btn + .links {
-        display: flex;
-    }
-
-    /* formulário mais ajustado */
-    .contacto-sitio {
-        margin: 80px 20px 40px 20px;
-        padding: 30px 20px;
-    }
-
-    .contacto-sitio h2 {
-        font-size: 26px;
-    }
-
-    .rodape-texto {
-        font-size: 14px;
-    }
-}
-
-/* tablets médios/portátil pequeno */
-@media (max-width: 1024px) {
-    .logo {
-        margin-left: 40px;
-        height: 85px;
-    }
-
-    .links {
-        gap: 50px;
-        margin-right: 60px;
-    }
-
-    .contacto-sitio {
-        margin-top: 100px;
-    }
-}
