@@ -299,20 +299,48 @@ h2 {
 
 
 
+.menu-toggle {
+    display: none;
+}
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 25px;
+}
 
+.menu-btn .bar {
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
 
+    .menu-btn {
+        display: flex;
+    }
 
+    .links {
+        display: none;
+        position: absolute;
+        top: 90px;
+        right: 20px;
+        background: rgb(22,22,61);
+        padding: 20px;
+        border-radius: 10px;
+        text-align: right;
+        flex-direction: column;
+        gap: 15px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
+    /* Quando o checkbox está ativado → mostrar o menu */
+    .menu-toggle:checked + .menu-btn + .links {
+        display: flex;
+    }
+}
 
 
