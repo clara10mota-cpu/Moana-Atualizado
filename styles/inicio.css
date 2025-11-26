@@ -144,11 +144,77 @@ iframe {
     font-size: 16px;
 }
 
+/* modificações para ecras sem ser computador */
+
+/* modificação para telemovel (até 480 px) */
+
+@media (max-widht:480px)  {
+
+/* modificar cabeçalho */
+
+.cabecalho {
+    padding: 10px 15px;
+}
+
+/* modificar os links */
+
+.links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+/* modificar parte da introdução + trailler */
+
+.introetrailer {
+    padding: 25px 15px;
+}
+
+/*modificar a forma que o trailler aparece */
+
+.video-container {
+    margin-top: 17px;
+}
+
+/* modificar o rodapé */
+
+.rodape-texto {
+    font-size: 13px;
+ }   
+} 
 
 
+ /* modificar para tablets */
 
+ @media (max-widht:900px)  {
 
+/* modificar o logo  */
 
+.logo {
+    height: 75px;
+}
+
+/* modificar cabeçalho */
+
+.cabecalho {
+    padding: 10px 17px;
+    
+}
+
+/* modificar os links */
+
+.links {
+   
+    gap: 40px;
+}
+
+/* modificar parte da introdução + trailler */
+
+.introetrailer {
+    padding: 45px 30px;
+}
+
+}
 
 
 
