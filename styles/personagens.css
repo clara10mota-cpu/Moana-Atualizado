@@ -106,6 +106,71 @@ html,body {
     background-size: cover;
 }
 
+/* checkbox do menu mobile */
+.menu-toggle {
+    display: none;
+}
+
+/* botão hambúrguer */
+.menu-btn {
+    display: none; /* aparece só no mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.menu-btn .bar {
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+
+    .fundo {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cabecalho {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        height: 75px;
+        margin-left: 10px;
+    }
+
+    /* mostrar hambúrguer, esconder links */
+    .menu-btn {
+        display: flex;
+    }
+
+    .links {
+        display: none;
+        position: absolute;
+        top: 90px;
+        right: 20px;
+        background: rgb(22, 22, 61);
+        padding: 20px;
+        border-radius: 10px;
+        flex-direction: column;
+        gap: 15px;
+        margin-right: 0;
+    }
+
+    /* quando o checkbox está marcado → mostra o menu */
+    .menu-toggle:checked + .menu-btn + .links {
+        display: flex;
+    }
+}
+
 /* modificar titulo */ 
 
 h1 {

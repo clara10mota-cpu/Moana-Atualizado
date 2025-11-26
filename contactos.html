@@ -8,43 +8,61 @@
 </head>
 <body class="fundo">
 
-    <button class="menu-btn" aria-label="Abrir menu">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-    </button>
+    <!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacta a Moana</title>
+    <link rel="stylesheet" href="styles/contactos.css">
+</head>
+<body class="fundo">
 
-    <!-- Cabeçalho-->
+    <!-- Cabeçalho -->
     <header>
         <nav class="cabecalho">
-            <img src="Imagens/moana.png" class="logo">
-            <nav class="menu-mobile" aria-label="Menu móvel"></nav>
+
+            <img src="Imagens/moana.png" class="logo" alt="Logótipo da Moana">
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <!-- Ícone do hambúrguer (mobile) -->
+            <label for="menu-toggle" class="menu-btn" aria-label="Abrir menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </label>
+            
             <ul class="links">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="personagens.html">Personagens</a></li>
-            <li><a href="contactos.html"> Contactos</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
             </ul>
         </nav>
-        </header>
-        
-    <!-- formulárilo -->
+    </header>
 
+    <!-- Conteúdo -->
     <section class="contacto-sitio">  
-        <h2> Fala com a Moana !! </h2>
-    
-    <form class="form-moana">
-        <label for="email">O teu email: </label>
-        <input type="email" id="email" name="email" required>
-        <label for="mensagem"> A tua mensagem: </label>
-        <textarea id="mensagem" name="mensagem" required></textarea>
-        <button type="submit">Enviar mensagem</button>
-    </form>
+        <h2>Fala com a Moana !!</h2>
+
+        <form class="form-moana">
+            <label for="email">O teu email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">A tua mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar mensagem</button>
+        </form>
     </section>
 
-<!-- rodapé muito basico -->
+    <!-- Rodapé -->
     <footer class="rodape">
-        <p class="rodape-texto"> Moana | Tsiw </p>
+        <p class="rodape-texto">Moana | Tsiw</p>
     </footer>
+
+</body>
+</html>
+
 
 </body>
 </html>

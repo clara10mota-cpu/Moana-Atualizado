@@ -1,18 +1,34 @@
-/* fontes de letra utilizadas */
+/* fontes de letras utilizadas (opcional, igual às outras páginas) */
+@font-face {
+    font-family: 'Panchang-Extrabold.otf';
+    src: url('../fonts/Panchang-Extrabold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'PoetsenOne-Regular';
+    src: url('../fonts/PoetsenOne-Regular.ttf') format('opentype');
+}
 @font-face {
     font-family: 'Pacifico-Regular';
     src: url('../fonts/Pacifico-Regular.ttf') format('opentype');
 }
 
-/* estealização da pagina web */
-
-html,body {
+/* reset básico */
+html, body {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
-/* criação do cabeçalho */
+/* fundo da página */
+.fundo {
+    background-image: url("../Imagens/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* cabeçalho  */
 
 .cabecalho {
     display: flex;
@@ -21,289 +37,23 @@ html,body {
     background-color: rgb(22, 22, 61);
     border-radius: 0 0 50px 50px;
     padding: 10px 0;
-    margin-top: 0;
 }
 
-/* modificação dos "links */ 
-
-.links {
-    list-style: none;
-    display: flex;
-    gap: 90px;
- } 
-
-.links a {
-    text-decoration: none;
-    margin-right: 100px;
-    color: rgb(200, 235, 255);
-    font-family: 'Pacifico-Regular';
-    font-size: 18px;
-}
-
-.links a:hover {
-    color: #ffffff;
-}
+/* logo */
 
 .logo {
     height: 100px;
     margin-left: 105px;
 }
 
-/* fundo */
-
-.fundo {
-    background-image: url("../Imagens/fundo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* formulário do cabeçalho */
-
-/* estelização do cabeçalho |*/
-
-.contacto-sitio {
-    width: 50%;
-    margin: 120px auto 60px;
-    padding: 30px 40px;
-    background:rgb(22, 22, 61) ;
-    border-radius: 20px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: 'Pacifico-Regular';
-}
-
-/* modificação do titulo */
-
-h2 {
-    font-size: 45px;
-}
-
-/* modificação de formulário */
-
-.form-moana {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-/* alinhar os "subtitulos" a esquerda e de forma legivel*/ 
-
-label {
-    width: 100%;
-    margin: 0;
-    font-size: 20px;
-    text-align: left;
-}
-
-
-/* por a caixa no mesmo tamanho e não editavel */
-
-textarea {
-    height: 100px;
-    resize: none;
-}
-
-
-/* estealizar o botão */
-
-button {
-    width: 150px;
-    padding: 12px 0;
-    border-radius: 20px;
-    background-color: #9cd9ff;
-    color: #0b1a33;
-    font-size: 20px;
-    margin-top: 35px;
-    align-items: center;
-    margin: 10px auto 0;
-    /* um zoozito a passar com o rato no botão */
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-/* apos clicar no botão */
-button:hover {
-background-color: #ffffff;
-transform: scale(1.12);
-}
-
-
-/* rodapé */
-.rodape {
-    color:rgb(0, 0, 0);
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 40px;
-    font-family: Arial, Helvetica, sans-serif;
- }
- 
- .rodape-texto {
-    margin: 0;
-    font-size: 16px;
-}
-
-/* modificações para ecras sem ser computador */
-
-/* modificação para telemovel (até 480 px) */
-
-@media (max-widht:480px)  {
-
-/* modificar cabeçalho */
-
-.cabecalho {
-    padding: 10px 15px;
-}
-
-/* modificar os links */
-
-.links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-/* modificar parte dos contcatos */
-
-.contacto-sitio {
-    width: 92%;
-    margin: 60px auto 25px;
-    padding: 18px 13px;
-}
-
-/*modificar o titulo  */
-
-h2 {
-    margin-top: 17px;
-}
-
-/* modificar o rodapé */
-
-.contacto-intro {
-    font-size: 13px;
- }   
-
- /*modificar botão */
-
- .button {
-    width: 100%;
-} 
-
-/* modificar rodapé */
-
-.rodape-texto {
-    font-size: 13px;
-} 
-}
-
- /* modificar para tablets */
-
- @media (max-widht:900px)  {
-
-/* modificar o logo  */
-
-.logo {
-    height: 75px;
-}
-
-/* modificar cabeçalho */
-
-.cabecalho {
-    padding: 10px 17px;
-    
-}
-
-/* modificar os links */
-
-.links {
-   
-    gap: 40px;
-}
-
-/* modificar parte do contacto */
-
-.contacto-sitio {
-    width: 70%;
-    margin: 90px auto 35px;
-    padding: 25px 25px;
-}
-
-h2 {
-
-    font-size: 28px;
-}
-}
-
-.menu-btn {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 32px;
-    height: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-right: 20px;
-}
-
-.menu-btn .bar {
-    height: 4px;
-    width: 100%;
-    background: white;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-.menu-mobile {
-    display: none;
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    background: rgb(22,22,61);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-}
-
-.menu-mobile ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu-mobile li {
-    margin: 12px 0;
-}
-
-.menu-mobile a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: Pacifico;
-}
-@media (max-width: 768px) {
-
-    .menu-btn {
-        display: flex;
-    }
-
-    .menu-desktop {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        background-attachment: scroll;  /* evita bug no iPhone */
-        background-size: cover;
-    }
-}
-
-
-
-
+/* checkbox do menu mobile */
 .menu-toggle {
     display: none;
 }
+
+/* botão hambúrguer */
 .menu-btn {
-    display: none;
+    display: none; /* aparece só no mobile */
     flex-direction: column;
     justify-content: space-between;
     width: 32px;
@@ -318,8 +68,26 @@ h2 {
     background: white;
     border-radius: 10px;
 }
-@media (max-width: 490px) {
 
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+
+    .fundo {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cabecalho {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        height: 75px;
+        margin-left: 10px;
+    }
+
+    /* mostrar hambúrguer, esconder links */
     .menu-btn {
         display: flex;
     }
@@ -329,18 +97,174 @@ h2 {
         position: absolute;
         top: 90px;
         right: 20px;
-        background: rgb(22,22,61);
+        background: rgb(22, 22, 61);
         padding: 20px;
         border-radius: 10px;
-        text-align: right;
         flex-direction: column;
         gap: 15px;
+        margin-right: 0;
     }
 
-    /* Quando o checkbox está ativado → mostrar o menu */
+    /* quando o checkbox está marcado → mostra o menu */
     .menu-toggle:checked + .menu-btn + .links {
         display: flex;
     }
 }
 
 
+/* SECÇÃO DO FORMULÁRIO */
+
+.contacto-sitio {
+    max-width: 450px;
+    margin: 120px auto 60px auto;
+    background-color: #15183c;
+    border-radius: 40px;
+    padding: 40px 30px;
+    color: white;
+    font-family: 'Pacifico-Regular', Arial, Helvetica, sans-serif;
+}
+
+.contacto-sitio h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* formulário */
+
+.form-moana {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-moana label {
+    font-size: 18px;
+}
+
+.form-moana input,
+.form-moana textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-moana textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-moana button {
+    margin-top: 15px;
+    padding: 12px 0;
+    border-radius: 10px;
+    border: none;
+    background-color: #7ed3ff;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-moana button:hover {
+    filter: brightness(0.95);
+}
+
+/* rodapé */
+
+.rodape {
+    color: #000;
+    padding: 20px 0 30px 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rodape-texto {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* ------------------ RESPONSIVO ------------------ */
+
+/* mobile e tablets pequenos */
+@media (max-width: 768px) {
+
+    /* fundo: evita bug no iPhone */
+    .fundo {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* cabeçalho mais compacto */
+    .cabecalho {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        height: 75px;
+        margin-left: 10px;
+    }
+
+    /* mostra o hambúrguer e esconde os links */
+    .menu-btn {
+        display: flex;
+    }
+
+    .links {
+        display: none;
+        position: absolute;
+        top: 90px;
+        right: 20px;
+        background: rgb(22, 22, 61);
+        padding: 20px;
+        border-radius: 10px;
+        flex-direction: column;
+        gap: 15px;
+        margin-right: 0;
+    }
+
+    .links a {
+        margin: 0;
+    }
+
+    /* quando o checkbox está marcado → mostra o menu */
+    .menu-toggle:checked + .menu-btn + .links {
+        display: flex;
+    }
+
+    /* formulário mais ajustado */
+    .contacto-sitio {
+        margin: 80px 20px 40px 20px;
+        padding: 30px 20px;
+    }
+
+    .contacto-sitio h2 {
+        font-size: 26px;
+    }
+
+    .rodape-texto {
+        font-size: 14px;
+    }
+}
+
+/* tablets médios/portátil pequeno */
+@media (max-width: 1024px) {
+    .logo {
+        margin-left: 40px;
+        height: 85px;
+    }
+
+    .links {
+        gap: 50px;
+        margin-right: 60px;
+    }
+
+    .contacto-sitio {
+        margin-top: 100px;
+    }
+}

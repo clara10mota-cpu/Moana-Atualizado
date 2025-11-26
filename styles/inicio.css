@@ -85,6 +85,72 @@ html,body {
     pointer-events: none;
     }
 
+/* checkbox do menu mobile */
+.menu-toggle {
+    display: none;
+}
+
+/* botão hambúrguer */
+.menu-btn {
+    display: none; /* aparece só no mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 25px;
+}
+
+.menu-btn .bar {
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+
+    .fundo {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .cabecalho {
+        padding: 10px 15px;
+    }
+
+    .logo {
+        height: 75px;
+        margin-left: 10px;
+    }
+
+    /* mostrar hambúrguer, esconder links */
+    .menu-btn {
+        display: flex;
+    }
+
+    .links {
+        display: none;
+        position: absolute;
+        top: 90px;
+        right: 20px;
+        background: rgb(22, 22, 61);
+        padding: 20px;
+        border-radius: 10px;
+        flex-direction: column;
+        gap: 15px;
+        margin-right: 0;
+    }
+
+    /* quando o checkbox está marcado → mostra o menu */
+    .menu-toggle:checked + .menu-btn + .links {
+        display: flex;
+    }
+}
+
+
  /* parte onde vai aparecer o texto + trailler */ 
 
  .introetrailer { 
@@ -215,115 +281,4 @@ iframe {
 }
 
 }
-
-.menu-btn {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 32px;
-    height: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-right: 20px;
-}
-
-.menu-btn .bar {
-    height: 4px;
-    width: 100%;
-    background: white;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-.menu-mobile {
-    display: none;
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    background: rgb(22,22,61);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-}
-
-.menu-mobile ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.menu-mobile li {
-    margin: 12px 0;
-}
-
-.menu-mobile a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: Pacifico;
-}
-@media (max-width: 768px) {
-
-    .menu-btn {
-        display: flex;
-    }
-
-    .menu-desktop {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    body {
-        background-attachment: scroll;  /* evita bug no iPhone */
-        background-size: cover;
-    }
-}
-
-
-
-.menu-toggle {
-    display: none;
-}
-.menu-btn {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 32px;
-    height: 24px;
-    cursor: pointer;
-    margin-right: 25px;
-}
-
-.menu-btn .bar {
-    height: 4px;
-    width: 100%;
-    background: white;
-    border-radius: 10px;
-}
-@media (max-width: 490px) {
-
-    .menu-btn {
-        display: flex;
-    }
-
-    .links {
-        display: none;
-        position: absolute;
-        top: 90px;
-        right: 20px;
-        background: rgb(22,22,61);
-        padding: 20px;
-        border-radius: 10px;
-        text-align: right;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    /* Quando o checkbox está ativado → mostrar o menu */
-    .menu-toggle:checked + .menu-btn + .links {
-        display: flex;
-    }
-}
-
 
