@@ -232,35 +232,87 @@ h2 {
 }
 }
 
-/* Botão do menu (3 pontos) */
 .menu-btn {
-    font-size: 32px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
     background: none;
     border: none;
-    color: white;
     cursor: pointer;
-    display: none; /* escondido por defeito */
+    margin-right: 20px;
 }
 
-/* Quando está em ecrãs pequenos, aparece */
-@media (max-width: 700px) {
+.menu-btn .bar {
+    height: 4px;
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.menu-mobile {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: rgb(22,22,61);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.menu-mobile ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-mobile li {
+    margin: 12px 0;
+}
+
+.menu-mobile a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: Pacifico;
+}
+@media (max-width: 768px) {
+
     .menu-btn {
-        display: block;
-        margin-right: 20px;
-    }
-
-    /* escondemos os links por defeito em telemóvel */
-    .links {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        background-color: rgb(22, 22, 61);
-        padding: 10px 20px;
-        border-radius: 0 0 20px 20px;
-    }
-
-    /* quando ativo, mostra o menu */
-    .links.active {
         display: flex;
     }
+
+    .menu-desktop {
+        display: none;
+    }
 }
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;  /* evita bug no iPhone */
+        background-size: cover;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
