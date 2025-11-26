@@ -216,78 +216,56 @@ iframe {
 
 /* modificação para telemovel (até 480 px) */
 
-@media (max-widht:480px)  {
-
-/* modificar cabeçalho */
-
-.cabecalho {
-    padding: 10px 15px;
-}
-
-/* modificar os links */
-
-.links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-/* modificar parte da introdução + trailler */
-
-.introetrailer {
-    padding: 25px 15px;
-}
-
-/*modificar a forma que o trailler aparece */
-
-.video-container {
-    margin-top: 17px;
-}
-
-/* modificar o rodapé */
-
-.rodape-texto {
-    font-size: 13px;
- }   
-} 
-
-.fundo {
+@media (max-width: 768px) {
+    .fundo {
         background-attachment: scroll;
         background-size: cover;
-        background-position: center center;
+        background-position: center;
     }
 
+    .cabecalho {
+        padding: 10px 15px;
+    }
 
+    .logo {
+        height: 75px;
+        margin-left: 10px;
+    }
 
- /* modificar para tablets */
+    /* mostrar hambúrguer, esconder links */
+    .menu-btn {
+        display: flex;
+    }
 
- @media (max-widht:900px)  {
+    .links {
+        display: none;
+        position: absolute;
+        top: 90px;
+        right: 20px;
+        background: rgb(22, 22, 61);
+        padding: 20px;
+        border-radius: 10px;
+        flex-direction: column;
+        gap: 15px;
+        margin-right: 0;
+    }
 
-/* modificar o logo  */
+    /* quando o checkbox está marcado → mostra o menu */
+    .menu-toggle:checked + .menu-btn + .links {
+        display: flex;
+    }
 
-.logo {
-    height: 75px;
-}
+    .contacto-sitio {
+        margin: 80px 20px 40px 20px;
+        padding: 30px 20px;
+    }
 
-/* modificar cabeçalho */
+    .contacto-sitio h2 {
+        font-size: 26px;
+    }
 
-.cabecalho {
-    padding: 10px 17px;
-    
-}
-
-/* modificar os links */
-
-.links {
-   
-    gap: 40px;
-}
-
-/* modificar parte da introdução + trailler */
-
-.introetrailer {
-    padding: 45px 30px;
-}
-
+    .rodape-texto {
+        font-size: 14px;
+    }
 }
 

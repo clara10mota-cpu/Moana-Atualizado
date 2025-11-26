@@ -202,117 +202,23 @@ h1 {
 
 /* modificação para telemovel (até 480 px) */
 
-@media (max-widht:480px)  {
+@media (max-width: 768px) {
+    .fundo {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center;
+    }
 
-/* modificar cabeçalho */
+    .cabecalho {
+        padding: 10px 15px;
+    }
 
-.cabecalho {
-    padding: 10px 15px;
-}
+    .logo {
+        height: 75px;
+        margin-left: 10px;
+    }
 
-/* modificar os links */
-
-.links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-/* modificar titulo */
-
-h1 {
-    margin-top: 38px;
-    font-size: 30px;
-    text-align: center;
-}
-
-/* modificação do espaço dos quadros */
-
-.elenco {
-    margin-top: 30px;
-}
-
-/* modificar cartões */
-
-.cartao {
-    width: 100%;
-}
-
-/* editar rodapé */
-
-.rodape-texto {
-    font-size: 13px;
- }   
-
-} 
-
- /* modificar para tablets */
-
- @media (max-widht:900px)  {
-
-/* modificar o logo  */
-
-.logo {
-    height: 75px;
-}
-
-/* modificar cabeçalho */
-
-.cabecalho {
-    padding: 10px 17px;
-    
-}
-
-/* modificar os links */
-
-.links {
-     gap: 40px;
-}
-
-/* modificar o titulo */
-
-h1 {
-    margin-top: 60px;
-    font-size: 30px;
-}
- 
-/* modificar espaço dos cartões */
-
-.elenco {
-    margin-top: 40px;
-    gap: 24px;
-}
-
-/*modificar cartões */
-
-.cartao {
-    width: 45%;
-    margin-left: 0;
-
-}
-}
-
-.menu-toggle {
-    display: none;
-}
-.menu-btn {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 32px;
-    height: 24px;
-    cursor: pointer;
-    margin-right: 25px;
-}
-
-.menu-btn .bar {
-    height: 4px;
-    width: 100%;
-    background: white;
-    border-radius: 10px;
-}
-@media (max-width: 490px) {
-
+    /* mostrar hambúrguer, esconder links */
     .menu-btn {
         display: flex;
     }
@@ -322,24 +228,29 @@ h1 {
         position: absolute;
         top: 90px;
         right: 20px;
-        background: rgb(22,22,61);
+        background: rgb(22, 22, 61);
         padding: 20px;
         border-radius: 10px;
-        text-align: right;
         flex-direction: column;
         gap: 15px;
+        margin-right: 0;
     }
 
-    /* Quando o checkbox está ativado → mostrar o menu */
+    /* quando o checkbox está marcado → mostra o menu */
     .menu-toggle:checked + .menu-btn + .links {
         display: flex;
     }
-    .fundo {
-        background-attachment: scroll;
-        background-size: cover;
-        background-position: center center;
+
+    .contacto-sitio {
+        margin: 80px 20px 40px 20px;
+        padding: 30px 20px;
     }
 
+    .contacto-sitio h2 {
+        font-size: 26px;
+    }
+
+    .rodape-texto {
+        font-size: 14px;
+    }
 }
-
-
