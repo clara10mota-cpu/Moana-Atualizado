@@ -1,10 +1,6 @@
 /* fontes de letras utilizadas */ 
 
 @font-face {
-    font-family: 'Panchang-Extrabold.otf';
-    src: url('../fonts/Panchang-Extrabold.otf') format('opentype');
-}
-@font-face {
     font-family: 'PoestsenOne-Regular';
     src: url('../fonts/PoetsenOne-Regular.ttf') format('opentype');
 }
@@ -13,6 +9,7 @@
     font-family: 'Pacifico-Regular';
     src: url('../fonts/Pacifico-Regular.ttf') format('opentype');
 }
+
 /* estealização da pagina web */
 
 html,body {
@@ -48,11 +45,17 @@ html,body {
     font-family: 'Pacifico-Regular';
     font-size: 18px;
 }
+
+/* modificar link apos passar o rato */
+.links a:hover {
+    color: rgb(245, 245, 245);
+} 
+
+
 .logo {
     height: 100px;
     margin-left: 105px;
 }
-/* falta fazer o zoom */
 
 /* cartões */
 
@@ -86,6 +89,8 @@ html,body {
     transform: scale(1.12);
 }
 
+/* modificar as imahens dos cartões*/
+
 .foto{
    height: 145px;
 }
@@ -103,38 +108,44 @@ html,body {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
-    background-attachment: scroll; /* <- muito importante para iPhone */
+    background-attachment: scroll; 
     min-height: 100vh;
 }
 
-/* checkbox do menu mobile */
+
+/* modificação do cabeçalho no telemovel  */
+
 .menu-toggle {
     display: none;
 }
 
-/* botão hambúrguer */
+/* botão do hambúrguer configurações : so aparecer no telemovel*/
+
 .menu-btn {
-    display: none; /* aparece só no mobile */
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 32px;
     height: 24px;
     cursor: pointer;
     margin-right: 25px;
-}
+}    
+
+/* criar barra horizontal configurações : ocupar tudo , */
 
 .menu-btn .bar {
-    height: 4px;
+    height: 3px;
     width: 100%;
     background: white;
-    border-radius: 10px;
-}
+} 
 
+/* fazer com que o site funcione em telemovel */
 
-@media (max-width: 480px) {
+@media (max-width : 768px) {
 
-   
-    body {
+/* modificar a pagina : configurações iniciais e fazer co que o fundo não se modifique */
+
+body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -142,19 +153,23 @@ html,body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
-}
+} 
+  
+/* implementação do cabeçalho */
 
+.cabecalho {
+    padding: 10px 15px;
+} 
+   
+/* implementação do logo */
 
-    .cabecalho {
-        padding: 10px 15px;
-    }
+.logo { 
+    height: 75px;
+    margin-left: 10px;
+} 
 
-    .logo {
-        height: 75px;
-        margin-left: 10px;
-    }
+/* mostrar icone do hamburguer e esconder os links */
 
-    /* mostrar hambúrguer, esconder links */
     .menu-btn {
         display: flex;
     }
@@ -171,16 +186,14 @@ html,body {
         gap: 15px;
         margin-right: 0;
     }
-
-    /* quando o checkbox está marcado → mostra o menu */
     .menu-toggle:checked + .menu-btn + .links {
         display: flex;
     }
 }
 
-/* modificar titulo */ 
+/* modificar o titulo */
 
-h1 {
+    h1 {
     text-align: center;
     font-family: 'PoestsenOne-Regular';
     margin-top: 130px;
@@ -204,59 +217,4 @@ h1 {
     font-size: 16px;
 }
 
-/* modificações para ecras sem ser computador */
 
-/* modificação para telemovel (até 480 px) */
-
-@media (max-width: 768px) {
-    .fundo {
-        background-attachment: scroll;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .cabecalho {
-        padding: 10px 15px;
-    }
-
-    .logo {
-        height: 75px;
-        margin-left: 10px;
-    }
-
-    /* mostrar hambúrguer, esconder links */
-    .menu-btn {
-        display: flex;
-    }
-
-    .links {
-        display: none;
-        position: absolute;
-        top: 90px;
-        right: 20px;
-        background: rgb(22, 22, 61);
-        padding: 20px;
-        border-radius: 10px;
-        flex-direction: column;
-        gap: 15px;
-        margin-right: 0;
-    }
-
-    /* quando o checkbox está marcado → mostra o menu */
-    .menu-toggle:checked + .menu-btn + .links {
-        display: flex;
-    }
-
-    .contacto-sitio {
-        margin: 80px 20px 40px 20px;
-        padding: 30px 20px;
-    }
-
-    .contacto-sitio h2 {
-        font-size: 26px;
-    }
-
-    .rodape-texto {
-        font-size: 14px;
-    }
-}

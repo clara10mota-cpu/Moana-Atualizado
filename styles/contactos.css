@@ -1,4 +1,5 @@
-/* fontes de letras utilizadas (opcional, igual às outras páginas) */
+/* fontes de letras utilizadas */
+
 @font-face {
     font-family: 'Panchang-Extrabold.otf';
     src: url('../fonts/Panchang-Extrabold.otf') format('opentype');
@@ -32,7 +33,7 @@ html,body {
     margin-top: 0;
 }
 
-/* modificação dos "links */
+/* modificação dos "links" */
 
 .links {
     list-style: none;
@@ -47,6 +48,12 @@ html,body {
     font-family: 'Pacifico-Regular';
     font-size: 18px;
 }
+
+.links a:hover {
+    color: #ffffff;
+}
+
+/* logo */
 .logo {
     height: 100px;
     margin-left: 105px;
@@ -57,8 +64,6 @@ h2 {
     font-size: 45px;
     font-family: 'PoetsenOne-Regular';
 }  
-
-
 
 /* fundo */
 
@@ -71,42 +76,54 @@ h2 {
     min-height: 100vh;  
 }
 
-/* checkbox do menu mobile */
+/* modificação do cabeçalho no telemovel  */
+
 .menu-toggle {
     display: none;
 }
 
-/* botão hambúrguer */
+/* botão do hambúrguer configurações : so aparecer no telemovel*/
+
 .menu-btn {
-    display: none; /* aparece só no mobile */
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 32px;
     height: 24px;
     cursor: pointer;
     margin-right: 25px;
-}
+}    
+
+/* criar barra horizontal configurações : ocupar tudo , */
 
 .menu-btn .bar {
-    height: 4px;
+    height: 3px;
     width: 100%;
     background: white;
-    border-radius: 10px;
-}
+} 
 
-/* --- RESPONSIVO --- */
+
+/* fazer com que o site aparece no telemovel */
+
 @media (max-width: 768px) {
 
-    .fundo {
-        background-attachment: scroll;
-        background-size: cover;
-        background-position: center;
-    }
+    body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url("../Imagens/fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
 
+
+    /* implementação do cabecçalho */
     .cabecalho {
         padding: 10px 15px;
     }
 
+    /*modificar logo */
     .logo {
         height: 75px;
         margin-left: 10px;
@@ -129,12 +146,37 @@ h2 {
         gap: 15px;
         margin-right: 0;
     }
-
-    /* quando o checkbox está marcado → mostra o menu */
     .menu-toggle:checked + .menu-btn + .links {
         display: flex;
     }
+    /* modificar titulo */
+
+h2 {
+    margin-top: 38px;
+    font-size: 30px;
+    text-align: center;
 }
+
+/* modificação do espaço dos quadros */
+
+.contacto-sitio {
+    margin-top: 30px;
+}
+
+/* modificar cartões */
+
+.form-moana{
+    width: 100%;
+}
+
+/* editar rodapé */
+
+.rodape-texto {
+    font-size: 13px;
+ }   
+
+} 
+
 
 /* modificar titulo */ 
 
@@ -160,37 +202,6 @@ h1 {
  .rodape-texto {
     margin: 0;
     font-size: 16px;
-}
-
-/* modificações para ecras sem ser computador */
-
-/* modificação para telemovel (até 480 px) */
-
-@media (max-widht:480px)  {
-
-/* modificar cabeçalho */
-
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background-image: url("../Imagens/fundo.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: scroll;
-}
-
-
-.cabecalho {
-    padding: 10px 15px;
-}
-
-/* modificar os links */
-
-.links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
 }
 
 /* modificar titulo */
@@ -219,124 +230,79 @@ h2 {
     font-size: 13px;
  }   
 
-} 
-
-@media (max-width: 768px) {
-    .fundo {
-        background-attachment: scroll;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .cabecalho {
-        padding: 10px 15px;
-    }
-
-    .logo {
-        height: 75px;
-        margin-left: 10px;
-    }
-
-    /* mostrar hambúrguer, esconder links */
-    .menu-btn {
-        display: flex;
-    }
-
-    .links {
-        display: none;
-        position: absolute;
-        top: 90px;
-        right: 20px;
-        background: rgb(22, 22, 61);
-        padding: 20px;
-        border-radius: 10px;
-        flex-direction: column;
-        gap: 15px;
-        margin-right: 0;
-    }
-
-    /* quando o checkbox está marcado → mostra o menu */
-    .menu-toggle:checked + .menu-btn + .links {
-        display: flex;
-    }
-
-    .contacto-sitio {
-        margin: 80px 20px 40px 20px;
-        padding: 30px 20px;
-    }
-
-    .contacto-sitio h2 {
-        font-size: 26px;
-    }
-
-    .rodape-texto {
-        font-size: 14px;
-    }
-}
-
-
-
-/* SECÇÃO DO FORMULÁRIO */
+/* criação do espaço do formulario */
 
 .contacto-sitio {
-    max-width: 450px;
+    max-width: 400px;
     margin: 120px auto 60px auto;
     background-color: #15183c;
-    border-radius: 40px;
+    border-radius: 45px;
     padding: 40px 30px;
-    color: white;
-    font-family: 'Pacifico-Regular', Arial, Helvetica, sans-serif;
-}
+    color: #ffffff;
+    font-family: 'Pacifico-Regular' ;
+} 
 
-.contacto-sitio h2 {
+h2 {
     text-align: center;
     font-size: 32px;
     margin-top: 0;
-    margin-bottom: 30px;
-}
+    margin-bottom: 29px;
+}     
 
 /* formulário */
+
+/* configurações do forms */
 
 .form-moana {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 14px;
 }
 
-.form-moana label {
-    font-size: 18px;
+/* modificar os titulos em cima do espaço de responder */
+
+label {
+    font-size: 17px;
 }
 
-.form-moana input,
-.form-moana textarea {
+/* configurações gerais  da area de texto e do input */
+
+input, textarea {
     width: 100%;
-    padding: 10px 12px;
-    border-radius: 8px;
+    padding: 10px 13px;
+    border-radius: 7px;
     border: none;
-    font-size: 16px;
+    font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.form-moana textarea {
-    min-height: 120px;
+/* modificação da area de texto */
+
+textarea {
+    min-width: 80px;
     resize: vertical;
 }
 
-.form-moana button {
+/* criação do botão */
+
+button {
     margin-top: 15px;
     padding: 12px 0;
     border-radius: 10px;
     border: none;
     background-color: #7ed3ff;
-    color: #000;
-    font-size: 18px;
+    color:#000;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
 }
 
-.form-moana button:hover {
-    filter: brightness(0.95);
-}
+/* apos passar pelo o botão */
+
+button:hover {
+    background-color: #ffffff;
+
+}    
 
 /* rodape bem basico */
 

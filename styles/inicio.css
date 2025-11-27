@@ -87,30 +87,35 @@ html,body {
     pointer-events: none;
     }
 
-/* checkbox do menu mobile */
+/* modificação do cabeçalho no telemovel  */
+
 .menu-toggle {
     display: none;
 }
 
-/* botão hambúrguer */
+/* botão do hambúrguer configurações : so aparecer no telemovel*/
+
 .menu-btn {
-    display: none; /* aparece só no mobile */
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 32px;
     height: 24px;
     cursor: pointer;
     margin-right: 25px;
-}
+}    
+
+/* criar barra horizontal configurações : ocupar tudo , */
 
 .menu-btn .bar {
-    height: 4px;
+    height: 3px;
     width: 100%;
     background: white;
-    border-radius: 10px;
-}
+} 
 
-/* --- RESPONSIVO --- */
+
+/* fazer com que o site aparece no telemovel */
+
 @media (max-width: 768px) {
 
     .fundo {
@@ -118,17 +123,17 @@ html,body {
         background-size: cover;
         background-position: center;
     }
-
+/* implementação do cabeçalho */
     .cabecalho {
         padding: 10px 15px;
     }
-
+/* implementação do logo */
     .logo {
         height: 75px;
         margin-left: 10px;
     }
 
-    /* mostrar hambúrguer, esconder links */
+/* mostrar icone do hamburguer e esconder os links */
     .menu-btn {
         display: flex;
     }
@@ -145,8 +150,6 @@ html,body {
         gap: 15px;
         margin-right: 0;
     }
-
-    /* quando o checkbox está marcado → mostra o menu */
     .menu-toggle:checked + .menu-btn + .links {
         display: flex;
     }
@@ -199,6 +202,7 @@ iframe {
     overflow: hidden;
 }
 
+/* rodape bem basico */
 .rodape {
     color:white;
     padding: 20px 0;
@@ -212,60 +216,5 @@ iframe {
     font-size: 16px;
 }
 
-/* modificações para ecras sem ser computador */
 
-/* modificação para telemovel (até 480 px) */
-
-@media (max-width: 768px) {
-    .fundo {
-        background-attachment: scroll;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .cabecalho {
-        padding: 10px 15px;
-    }
-
-    .logo {
-        height: 75px;
-        margin-left: 10px;
-    }
-
-    /* mostrar hambúrguer, esconder links */
-    .menu-btn {
-        display: flex;
-    }
-
-    .links {
-        display: none;
-        position: absolute;
-        top: 90px;
-        right: 20px;
-        background: rgb(22, 22, 61);
-        padding: 20px;
-        border-radius: 10px;
-        flex-direction: column;
-        gap: 15px;
-        margin-right: 0;
-    }
-
-    /* quando o checkbox está marcado → mostra o menu */
-    .menu-toggle:checked + .menu-btn + .links {
-        display: flex;
-    }
-
-    .contacto-sitio {
-        margin: 80px 20px 40px 20px;
-        padding: 30px 20px;
-    }
-
-    .contacto-sitio h2 {
-        font-size: 26px;
-    }
-
-    .rodape-texto {
-        font-size: 14px;
-    }
-}
 
